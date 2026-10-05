@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "author": "TouchTalk",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 50,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": -150,
+      "left": 360,
+      "attrs": {
+        "pins": "i2c"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzz",
+      "top": 180,
+      "left": 360,
+      "attrs": {
+        "volume": "0.2"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "pad1",
+      "top": 30,
+      "left": 470,
+      "attrs": {
+        "label": "1 YES",
+        "key": "1",
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "pad2",
+      "top": 30,
+      "left": 585,
+      "attrs": {
+        "label": "2 NO",
+        "key": "2",
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "pad3",
+      "top": 30,
+      "left": 700,
+      "attrs": {
+        "label": "3 WATER",
+        "key": "3",
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "pad4",
+      "top": 30,
+      "left": 815,
+      "attrs": {
+        "label": "4 FOOD",
+        "key": "4",
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "pad5",
+      "top": 140,
+      "left": 470,
+      "attrs": {
+        "label": "5 TOILET",
+        "key": "5",
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "pad6",
+      "top": 140,
+      "left": 585,
+      "attrs": {
+        "label": "6 HELP",
+        "key": "6",
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "pad7",
+      "top": 140,
+      "left": 700,
+      "attrs": {
+        "label": "7 REPEAT",
+        "key": "7",
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "pad8",
+      "top": 140,
+      "left": 815,
+      "attrs": {
+        "label": "8 CLEAR",
+        "key": "8",
+        "color": "blue"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "uno:5V",
+      "lcd:VCC",
+      "red",
+      []
+    ],
+    [
+      "uno:GND.1",
+      "lcd:GND",
+      "black",
+      []
+    ],
+    [
+      "uno:A4",
+      "lcd:SDA",
+      "green",
+      []
+    ],
+    [
+      "uno:A5",
+      "lcd:SCL",
+      "blue",
+      []
+    ],
+    [
+      "uno:12",
+      "buzz:2",
+      "orange",
+      []
+    ],
+    [
+      "uno:GND.2",
+      "buzz:1",
+      "black",
+      []
+    ],
+    [
+      "uno:2",
+      "pad1:1.l",
+      "green",
+      []
+    ],
+    [
+      "pad1:2.l",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "uno:3",
+      "pad2:1.l",
+      "green",
+      []
+    ],
+    [
+      "pad2:2.l",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "uno:4",
+      "pad3:1.l",
+      "green",
+      []
+    ],
+    [
+      "pad3:2.l",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "uno:5",
+      "pad4:1.l",
+      "green",
+      []
+    ],
+    [
+      "pad4:2.l",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "uno:6",
+      "pad5:1.l",
+      "green",
+      []
+    ],
+    [
+      "pad5:2.l",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "uno:7",
+      "pad6:1.l",
+      "green",
+      []
+    ],
+    [
+      "pad6:2.l",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "uno:8",
+      "pad7:1.l",
+      "green",
+      []
+    ],
+    [
+      "pad7:2.l",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "uno:9",
+      "pad8:1.l",
+      "green",
+      []
+    ],
+    [
+      "pad8:2.l",
+      "uno:GND.3",
+      "black",
+      []
+    ]
+  ],
+  "serialMonitor": {
+    "display": "always",
+    "newline": "lf"
+  }
+}
